@@ -35,12 +35,31 @@ collections:
         file: content/events.json
         format: json
         fields:
-          - label: 活動照片跑馬
+          - label: 活動照片
             name: gallery
             widget: list
+            summary: "{{fields.alt}}"
             fields:
               - { label: 照片, name: image, widget: image }
               - { label: 圖片說明, name: alt, widget: string }
+          - label: 活動相簿
+            name: albums
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: 相簿名稱, name: title, widget: string }
+              - { label: 相簿說明, name: description, widget: text, required: false }
+              - { label: 相簿封面, name: cover, widget: image, required: false }
+              - { label: 完整相簿連結, name: url, widget: string, required: false, hint: "可貼上 Google 相簿、雲端硬碟或其他公開相簿網址" }
+              - label: 相簿照片
+                name: photos
+                widget: list
+                required: false
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: 照片, name: image, widget: image }
+                  - { label: 圖片說明, name: alt, widget: string }
           - label: 活動
             name: events
             widget: list

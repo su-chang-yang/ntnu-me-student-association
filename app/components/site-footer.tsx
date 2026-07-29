@@ -17,7 +17,6 @@ export function SiteFooter() {
           <Link href="/events">活動消息</Link>
           <Link href="/team">成員介紹</Link>
           <Link href="/resources">常用連結</Link>
-          <Link href="/admin/">內容管理後台</Link>
         </div>
         <div>
           <h3>聯絡資訊</h3>
@@ -27,7 +26,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 NTNU ME Student Association</span>
-        <span>
+        <span className="footer-credit">
           本網頁由蘇暢言製作與維護，聯絡我：
           <a href="mailto:franksu940626@gmail.com">franksu940626@gmail.com</a>
         </span>

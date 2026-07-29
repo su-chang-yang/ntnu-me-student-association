@@ -2,9 +2,10 @@
   "gallery": [
     {
       "image": "/activity-preview-v1.png",
-      "alt": "校園活動、機電實作、系烤與職涯講座示意照片"
+      "alt": "系學會活動紀錄"
     }
   ],
+  "albums": [],
   "events": [
     {
       "date": "09.06",
