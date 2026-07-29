@@ -1,7 +1,7 @@
 {
   "gallery": [
     {
-      "image": "/uploads/DJI_20251108122833_0054_D.JPG",
+      "image": "/uploads/IMG_0036.JPG",
       "alt": "系學會活動紀錄"
     },
     {
@@ -9,7 +9,7 @@
       "alt": "03"
     },
     {
-      "image": "/uploads/DJI_20251108122826_0053_D.JPG",
+      "image": "/uploads/IMG_0008.JPG",
       "alt": "01"
     }
   ],
@@ -17,9 +17,22 @@
     {
       "title": "02",
       "description": "",
-      "cover": "/uploads/DJI_20251108123205_0058_D.JPG",
+      "cover": "/uploads/DJI_20251107153520_0029_D.JPG",
       "url": "",
-      "photos": []
+      "photos": [
+        {
+          "image": "/uploads/BUOJ6319.JPG",
+          "alt": "1"
+        },
+        {
+          "image": "/uploads/DJI_20251107153520_0029_D.JPG",
+          "alt": "2"
+        },
+        {
+          "image": "/uploads/DJI_20251109125932_0092_D.JPG",
+          "alt": "3"
+        }
+      ]
     }
   ],
   "events": [
@@ -31,7 +44,7 @@
       "description": "認識系學會、直屬制度與系上資源，活動資訊將於社群正式公告。",
       "status": "即將開放",
       "posterTitle": "新生茶會",
-      "poster": "/uploads/IMG_1229.JPG"
+      "poster": "/uploads/DJI_20251107153529_0030_D.JPG"
     },
     {
       "year": "2026",
