@@ -68,29 +68,44 @@ export default function EventsPage() {
               const cover = album.cover || albumPhotos[0]?.image;
 
               return (
-                <article className="album-card" key={album.title}>
-                  {cover && (
-                    <div className="album-cover">
-                      <img src={publicAsset(cover)} alt={`${album.title}相簿封面`} />
+                <details className="album-card" key={album.title}>
+                  <summary className="album-summary">
+                    {cover && (
+                      <div className="album-cover">
+                        <img src={publicAsset(cover)} alt={`${album.title}相簿封面`} />
+                      </div>
+                    )}
+                    <div className="album-copy">
+                      <h3>{album.title}</h3>
+                      {album.description && <p>{album.description}</p>}
+                      {albumPhotos.length > 0 && (
+                        <div className="album-thumbnails" aria-hidden="true">
+                          {albumPhotos.slice(0, 4).map((photo) => (
+                            <img src={publicAsset(photo.image)} alt="" key={photo.image} />
+                          ))}
+                        </div>
+                      )}
+                      <span className="album-open">點開查看相簿 ＋</span>
                     </div>
-                  )}
-                  <div className="album-copy">
-                    <h3>{album.title}</h3>
-                    {album.description && <p>{album.description}</p>}
+                  </summary>
+                  <div className="album-expanded">
                     {albumPhotos.length > 0 && (
-                      <div className="album-thumbnails" aria-label={`${album.title}照片`}>
-                        {albumPhotos.slice(0, 4).map((photo) => (
-                          <img src={publicAsset(photo.image)} alt={photo.alt} key={photo.image} />
+                      <div className="album-photo-grid" aria-label={`${album.title}全部照片`}>
+                        {albumPhotos.map((photo) => (
+                          <figure key={photo.image}>
+                            <img src={publicAsset(photo.image)} alt={photo.alt} />
+                            {photo.alt && <figcaption>{photo.alt}</figcaption>}
+                          </figure>
                         ))}
                       </div>
                     )}
                     {album.url && (
-                      <a href={album.url} target="_blank" rel="noreferrer">
+                      <a className="album-external-link" href={album.url} target="_blank" rel="noreferrer">
                         查看完整相簿 ↗
                       </a>
                     )}
                   </div>
-                </article>
+                </details>
               );
             })}
           </div>
@@ -128,7 +143,13 @@ export default function EventsPage() {
                 <p>{event.description}</p>
                 <div className="event-status">
                   <span>{event.status}</span>
-                  <span className="event-note">活動詳情將另行公告</span>
+                  {event.url ? (
+                    <a className="event-link" href={event.url} target="_blank" rel="noreferrer">
+                      前往活動／報名頁面 ↗
+                    </a>
+                  ) : (
+                    <span className="event-note">活動詳情將另行公告</span>
+                  )}
                 </div>
               </div>
             </article>

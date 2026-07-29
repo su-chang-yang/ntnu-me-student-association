@@ -114,15 +114,26 @@ a { color:inherit; text-decoration:none; }
 @media (prefers-reduced-motion:reduce) { .marquee-track { animation:none; } }
 .album-section { padding-top:75px; padding-bottom:20px; }
 .album-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
-.album-card { display:grid; grid-template-columns:minmax(180px,42%) 1fr; min-height:330px; border:1px solid var(--line); background:white; }
+.album-card { border:1px solid var(--line); background:white; }
+.album-summary { display:grid; grid-template-columns:minmax(180px,42%) 1fr; min-height:330px; cursor:pointer; list-style:none; }
+.album-summary::-webkit-details-marker { display:none; }
+.album-summary:hover { background:#fafaf8; }
 .album-cover { min-height:330px; display:grid; place-items:center; overflow:hidden; background:var(--paper); border-right:1px solid var(--line); }
 .album-cover img { width:100%; height:100%; display:block; object-fit:contain; object-position:center; }
 .album-copy { padding:28px; align-self:center; }
 .album-copy h3 { margin:0 0 12px; color:var(--navy); font-size:25px; }
 .album-copy p { color:var(--muted); font-size:13px; line-height:1.8; }
-.album-copy>a { display:inline-block; margin-top:18px; padding-bottom:5px; color:var(--navy); border-bottom:1px solid #9eabb6; font-size:12px; font-weight:800; }
+.album-open { display:inline-block; margin-top:20px; color:var(--navy); font-size:12px; font-weight:800; }
+.album-card[open] .album-open { font-size:0; }
+.album-card[open] .album-open::after { content:"收合相簿 −"; font-size:12px; }
 .album-thumbnails { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin-top:18px; }
 .album-thumbnails img { width:100%; aspect-ratio:3/4; object-fit:contain; background:var(--paper); border:1px solid var(--line); }
+.album-expanded { padding:28px; border-top:1px solid var(--line); }
+.album-photo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.album-photo-grid figure { margin:0; padding:10px; background:var(--paper); border:1px solid var(--line); }
+.album-photo-grid img { width:100%; height:300px; display:block; object-fit:contain; object-position:center; }
+.album-photo-grid figcaption { margin-top:8px; color:var(--muted); font-size:11px; line-height:1.5; }
+.album-external-link { display:inline-block; margin-top:22px; padding:11px 16px; color:white; background:var(--navy); font-size:12px; font-weight:800; }
 .events-content { padding-top:75px; padding-bottom:90px; }
 .compact-heading { padding-bottom:22px; border-bottom:2px solid var(--navy); }
 .compact-heading>p { max-width:430px; margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
@@ -139,6 +150,8 @@ a { color:inherit; text-decoration:none; }
 .event-status { display:flex; align-items:center; gap:15px; margin-top:28px; }
 .event-status>span { color:var(--navy); border:1px solid #aeb8bf; padding:7px 10px; font-size:11px; }
 .event-status>.event-note { border:0; padding:0; color:#8a949c; font-size:12px; }
+.event-link { display:inline-block; padding:9px 13px; color:white; background:var(--navy); font-size:12px; font-weight:800; transition:.15s; }
+.event-link:hover { background:var(--navy-2); }
 .archive-line { display:grid; grid-template-columns:220px 1fr 70px; gap:45px; align-items:center; padding-top:38px; padding-bottom:70px; border-top:2px solid var(--navy); }
 .archive-line h2 { margin:0; color:var(--navy); }.archive-line>p { color:var(--muted); line-height:1.7; }.archive-line>span { font-size:11px; color:#7d8991; }
 .site-footer { background:#e9e8e3; border-top:1px solid #d4d3cc; }
@@ -169,6 +182,6 @@ a { color:inherit; text-decoration:none; }
   .event-line { grid-template-columns:1fr; gap:12px; }.event-line>span { justify-self:start; }
   .department-grid,.principles,.contact-panel { grid-template-columns:1fr; }.mission { grid-template-columns:1fr; }
   .suggest-box { align-items:flex-start; flex-direction:column; gap:22px; }
-  .album-card { grid-template-columns:1fr; }.album-cover { min-height:auto; aspect-ratio:3/4; border-right:0; border-bottom:1px solid var(--line); }
+  .album-summary { grid-template-columns:1fr; }.album-cover { min-height:auto; aspect-ratio:3/4; border-right:0; border-bottom:1px solid var(--line); }.album-photo-grid { grid-template-columns:1fr; }.album-photo-grid img { height:auto; max-height:70vh; }
   .footer-main { grid-template-columns:1fr; }.footer-bottom { flex-direction:column; align-items:flex-start; gap:10px; }.footer-credit { text-align:left; }
 }

@@ -71,6 +71,7 @@ collections:
               - { label: 活動名稱, name: title, widget: string }
               - { label: 活動摘要, name: description, widget: text }
               - { label: 狀態, name: status, widget: string }
+              - { label: 活動或報名連結, name: url, widget: string, required: false, hint: "貼上報名表單、活動頁面或社群貼文網址" }
               - { label: 海報區標題, name: posterTitle, widget: string }
               - { label: 正式海報, name: poster, widget: image, required: false }
 
