@@ -1,11 +1,35 @@
 {
   "term": "115 學年度",
   "departments": [
-    { "name": "會長團", "description": "統籌系學會方向、對外代表與跨部門協調。", "photo": "" },
-    { "name": "活動部", "description": "規劃迎新、系烤、系週與各項交流活動。", "photo": "" },
-    { "name": "美宣部", "description": "負責視覺設計、社群內容與活動宣傳。", "photo": "" },
-    { "name": "公關部", "description": "經營外部合作、贊助與跨系交流。", "photo": "" },
-    { "name": "行政部", "description": "會議紀錄、文書管理與制度傳承。", "photo": "" },
-    { "name": "財務部", "description": "預算編列、收支管理與財務公開。", "photo": "" }
+    {
+      "name": "會長",
+      "description": "統籌系學會方向、對外代表與跨部門協調。",
+      "photo": ""
+    },
+    {
+      "name": "副會長",
+      "description": "規劃迎新、系烤、系週與各項交流活動。",
+      "photo": ""
+    },
+    {
+      "name": "財務兼資管",
+      "description": "預算編列、收支管理與財務公開。",
+      "photo": "/uploads/IMG_1316.JPG"
+    },
+    {
+      "name": "美宣部",
+      "description": "負責視覺設計、社群內容與活動宣傳。",
+      "photo": ""
+    },
+    {
+      "name": "公關部",
+      "description": "經營外部合作、贊助與跨系交流。",
+      "photo": ""
+    },
+    {
+      "name": "行政部",
+      "description": "會議紀錄、文書管理與制度傳承。",
+      "photo": ""
+    }
   ]
 }
