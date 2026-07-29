@@ -1,0 +1,112 @@
+backend:
+  name: github
+  repo: su-chang-yang/ntnu-me-student-association
+  branch: main
+  auth_methods: [token]
+  commit_messages:
+    update: "content: update {{collection}}"
+    uploadMedia: "content: upload media"
+
+media_folder: public/uploads
+public_folder: /uploads
+locale: zh_Hant
+
+collections:
+  - name: site
+    label: 網站基本資料
+    files:
+      - name: general
+        label: 基本資料
+        file: content/site.json
+        format: json
+        fields:
+          - { label: 網站名稱, name: siteName, widget: string }
+          - { label: 英文名稱, name: siteNameEn, widget: string }
+          - { label: 首頁簡介, name: homeLead, widget: text }
+          - { label: 電子信箱, name: email, widget: string }
+          - { label: 地址, name: address, widget: string }
+          - { label: Instagram 網址, name: instagram, widget: string }
+
+  - name: events
+    label: 活動管理
+    files:
+      - name: event_list
+        label: 活動與照片
+        file: content/events.json
+        format: json
+        fields:
+          - label: 活動照片跑馬
+            name: gallery
+            widget: list
+            fields:
+              - { label: 照片, name: image, widget: image }
+              - { label: 圖片說明, name: alt, widget: string }
+          - label: 活動
+            name: events
+            widget: list
+            summary: "{{fields.year}}.{{fields.date}}｜{{fields.title}}"
+            fields:
+              - { label: 年份, name: year, widget: string }
+              - { label: 日期, name: date, widget: string, hint: "例如 09.06" }
+              - { label: 類別, name: type, widget: string }
+              - { label: 活動名稱, name: title, widget: string }
+              - { label: 活動摘要, name: description, widget: text }
+              - { label: 狀態, name: status, widget: string }
+              - { label: 海報區標題, name: posterTitle, widget: string }
+              - { label: 正式海報, name: poster, widget: image, required: false }
+
+  - name: team
+    label: 成員介紹
+    files:
+      - name: team_list
+        label: 幹部與部門
+        file: content/team.json
+        format: json
+        fields:
+          - { label: 屆期, name: term, widget: string }
+          - label: 部門
+            name: departments
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: 部門名稱, name: name, widget: string }
+              - { label: 工作說明, name: description, widget: text }
+              - { label: 成員照片, name: photo, widget: image, required: false }
+
+  - name: resources
+    label: 常用連結
+    files:
+      - name: resource_list
+        label: 連結分類
+        file: content/resources.json
+        format: json
+        fields:
+          - label: 分類
+            name: groups
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: 分類名稱, name: title, widget: string }
+              - label: 連結
+                name: links
+                widget: list
+                fields:
+                  - { label: 名稱, name: name, widget: string }
+                  - { label: 網址, name: url, widget: string }
+
+  - name: about
+    label: 關於系學會
+    files:
+      - name: about_content
+        label: 使命與核心價值
+        file: content/about.json
+        format: json
+        fields:
+          - { label: 主標題, name: headline, widget: string }
+          - { label: 介紹段落, name: paragraphs, widget: list, field: { label: 段落, name: paragraph, widget: text } }
+          - label: 核心價值
+            name: principles
+            widget: list
+            fields:
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明, name: description, widget: text }

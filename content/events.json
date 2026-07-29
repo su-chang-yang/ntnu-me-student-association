@@ -1,0 +1,40 @@
+{
+  "gallery": [
+    {
+      "image": "/activity-preview-v1.png",
+      "alt": "校園活動、機電實作、系烤與職涯講座示意照片"
+    }
+  ],
+  "events": [
+    {
+      "date": "09.06",
+      "year": "2026",
+      "type": "新生專區",
+      "title": "115 學年度新生茶會",
+      "description": "認識系學會、直屬制度與系上資源，活動資訊將於社群正式公告。",
+      "status": "即將開放",
+      "posterTitle": "新生茶會",
+      "poster": ""
+    },
+    {
+      "date": "09.18",
+      "year": "2026",
+      "type": "系上活動",
+      "title": "機電系烤晚會",
+      "description": "全系交流活動，詳細時間、地點與報名方式待公告。",
+      "status": "籌備中",
+      "posterTitle": "系烤晚會",
+      "poster": ""
+    },
+    {
+      "date": "10.23",
+      "year": "2026",
+      "type": "職涯發展",
+      "title": "機電人的無限可能",
+      "description": "邀請系友分享精密機械、光機電整合與職涯選擇。",
+      "status": "籌備中",
+      "posterTitle": "職涯講座",
+      "poster": ""
+    }
+  ]
+}

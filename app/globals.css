@@ -76,6 +76,7 @@ a { color:inherit; text-decoration:none; }
 .department-grid article { background:white; padding:28px; min-height:300px; }
 .department-grid small { color:#9ca5ad; font:700 10px Arial; }
 .member-placeholder { width:75px; height:75px; margin:38px 0 25px; display:grid; place-items:center; border-radius:50%; background:#e9edf0; color:var(--navy); font-size:24px; font-weight:800; }
+.member-photo { width:75px; height:75px; margin:38px 0 25px; display:block; border-radius:50%; object-fit:cover; }
 .department-grid h3 { color:var(--navy); font-size:22px; margin:0 0 12px; }.department-grid p { color:var(--muted); line-height:1.7; font-size:13px; }
 .resource-groups { padding-top:70px; padding-bottom:100px; }
 .resource-groups>section { display:grid; grid-template-columns:220px 1fr; border-top:2px solid var(--navy); padding:25px 0 60px; }
@@ -114,6 +115,7 @@ a { color:inherit; text-decoration:none; }
 .event-poster-row { display:grid; grid-template-columns:220px 1fr; gap:55px; padding:42px 0; border-bottom:1px solid var(--line); }
 .poster-slot { aspect-ratio:4/5; display:flex; flex-direction:column; justify-content:space-between; padding:22px; color:var(--navy); background:#f0f1f1; border:1px solid #cbd1d5; }
 .poster-slot small { font:700 9px Arial; letter-spacing:.18em; }.poster-slot strong { font-size:23px; line-height:1.4; }.poster-slot span { font:600 9px Arial; color:#7e8991; }
+.poster-image { padding:0; overflow:hidden; }.poster-image img { width:100%; height:100%; display:block; object-fit:cover; }
 .poster-2 { background:#eceff1; }.poster-3 { background:#f2f1ee; }
 .event-info { align-self:center; }
 .event-meta { display:flex; gap:14px; align-items:center; color:#7e8991; font-size:11px; }

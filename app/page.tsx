@@ -1,10 +1,6 @@
 import Link from "next/link";
-
-const notices = [
-  { date: "09.06", category: "新生專區", title: "115 學年度新生茶會", note: "活動資料待正式公告" },
-  { date: "09.18", category: "系上活動", title: "機電系烤晚會", note: "活動資料待正式公告" },
-  { date: "10.23", category: "職涯發展", title: "機電人的無限可能", note: "活動資料待正式公告" },
-];
+import eventContent from "../content/events.json";
+import siteContent from "../content/site.json";
 
 export default function Home() {
   return (
@@ -14,7 +10,7 @@ export default function Home() {
           <p className="overline">NATIONAL TAIWAN NORMAL UNIVERSITY</p>
           <h1>國立臺灣師範大學<br />機電工程學系學會</h1>
           <p className="hero-en">NTNU MECHATRONIC ENGINEERING<br />STUDENT ASSOCIATION</p>
-          <p className="hero-lead">連結系上師生、整合學生資源，陪伴每一位機電人在學習、活動與未來選擇上穩定前進。</p>
+          <p className="hero-lead">{siteContent.homeLead}</p>
           <div className="hero-buttons">
             <Link className="button button-light" href="/about">認識系學會</Link>
             <Link className="button button-outline" href="/events">瀏覽活動消息</Link>
@@ -43,11 +39,11 @@ export default function Home() {
           <Link className="text-arrow" href="/events">查看全部活動 <span>→</span></Link>
         </div>
         <div className="notice-list">
-          {notices.map((item) => (
+          {eventContent.events.slice(0, 3).map((item) => (
             <Link className="notice-row" href="/events" key={item.title}>
-              <time>{item.date}<small>2026</small></time>
-              <span className="tag">{item.category}</span>
-              <div><h3>{item.title}</h3><p>{item.note}</p></div>
+              <time>{item.date}<small>{item.year}</small></time>
+              <span className="tag">{item.type}</span>
+              <div><h3>{item.title}</h3><p>{item.status}</p></div>
               <b>↗</b>
             </Link>
           ))}

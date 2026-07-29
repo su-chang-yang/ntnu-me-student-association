@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "title": "系所與課務",
+      "links": [
+        { "name": "機電工程學系官網", "url": "https://www.me.ntnu.edu.tw/" },
+        { "name": "Moodle 數位學習", "url": "https://moodle3.ntnu.edu.tw/" },
+        { "name": "教務處", "url": "https://www.aa.ntnu.edu.tw/" }
+      ]
+    },
+    {
+      "title": "校務系統",
+      "links": [
+        { "name": "校務行政入口", "url": "https://iportal.ntnu.edu.tw/" },
+        { "name": "學生請假系統", "url": "https://iportal.ntnu.edu.tw/" },
+        { "name": "圖書館", "url": "https://www.lib.ntnu.edu.tw/" }
+      ]
+    },
+    {
+      "title": "學生生活",
+      "links": [
+        { "name": "學生事務處", "url": "https://www.sa.ntnu.edu.tw/" },
+        { "name": "健康中心", "url": "https://health.sa.ntnu.edu.tw/" },
+        { "name": "學生輔導中心", "url": "https://counseling.sa.ntnu.edu.tw/" }
+      ]
+    }
+  ]
+}

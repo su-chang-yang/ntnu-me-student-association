@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import siteContent from "../../content/site.json";
 
 const nav = [
   ["/", "首頁"],
@@ -17,12 +18,12 @@ export function SiteHeader() {
     <header className="site-header">
       <Link className="site-brand" href="/">
         <span className="seal">ME</span>
-        <span><b>師大機電系學會</b><small>NTNU ME STUDENT ASSOCIATION</small></span>
+        <span><b>{siteContent.siteName}</b><small>{siteContent.siteNameEn}</small></span>
       </Link>
       <nav aria-label="主要導覽">
         {nav.map(([href, label]) => <Link className={path === href ? "active" : ""} href={href} key={href}>{label}</Link>)}
       </nav>
-      <a className="header-social" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a className="header-social" href={siteContent.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
     </header>
   );
 }
