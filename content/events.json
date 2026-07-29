@@ -1,25 +1,41 @@
 {
   "gallery": [
     {
-      "image": "/activity-preview-v1.png",
+      "image": "/uploads/DJI_20251108122833_0054_D.JPG",
       "alt": "系學會活動紀錄"
+    },
+    {
+      "image": "/uploads/DJI_20251107130104_0015_D.JPG",
+      "alt": "03"
+    },
+    {
+      "image": "/uploads/DJI_20251108122826_0053_D.JPG",
+      "alt": "01"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "title": "02",
+      "description": "",
+      "cover": "/uploads/DJI_20251108123205_0058_D.JPG",
+      "url": "",
+      "photos": []
+    }
+  ],
   "events": [
     {
-      "date": "09.06",
       "year": "2026",
+      "date": "09.06",
       "type": "新生專區",
       "title": "115 學年度新生茶會",
       "description": "認識系學會、直屬制度與系上資源，活動資訊將於社群正式公告。",
       "status": "即將開放",
       "posterTitle": "新生茶會",
-      "poster": ""
+      "poster": "/uploads/IMG_1229.JPG"
     },
     {
-      "date": "09.18",
       "year": "2026",
+      "date": "09.18",
       "type": "系上活動",
       "title": "機電系烤晚會",
       "description": "全系交流活動，詳細時間、地點與報名方式待公告。",
@@ -28,8 +44,8 @@
       "poster": ""
     },
     {
-      "date": "10.23",
       "year": "2026",
+      "date": "10.23",
       "type": "職涯發展",
       "title": "機電人的無限可能",
       "description": "邀請系友分享精密機械、光機電整合與職涯選擇。",
