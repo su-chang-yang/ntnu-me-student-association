@@ -5,6 +5,10 @@ const events = [
 ];
 
 export default function EventsPage() {
+  const assetBase = process.env.GITHUB_ACTIONS === "true"
+    ? "/ntnu-me-student-association"
+    : "";
+
   return (
     <main className="page-main">
       <section className="page-title simple-title">
@@ -18,8 +22,8 @@ export default function EventsPage() {
         <div className="container preview-heading"><span>活動照片預覽</span><small>示意素材・可替換為系學會實際照片</small></div>
         <div className="marquee">
           <div className="marquee-track">
-            <img src="/activity-preview-v1.png" alt="校園活動、機電實作、系烤與職涯講座示意照片" />
-            <img src="/activity-preview-v1.png" alt="" aria-hidden="true" />
+            <img src={`${assetBase}/activity-preview-v1.png`} alt="校園活動、機電實作、系烤與職涯講座示意照片" />
+            <img src={`${assetBase}/activity-preview-v1.png`} alt="" aria-hidden="true" />
           </div>
         </div>
       </section>
